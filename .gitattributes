@@ -1,0 +1,12 @@
+*.sty text eol=lf
+*.cls text eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+*.cfg text eol=lf
+*.pdf binary
+*.pptx binary
+*.odg binary
+*.png binary
+*.jpeg binary
+*.doc binary
+*.docx binary

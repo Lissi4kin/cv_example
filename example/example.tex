@@ -1,0 +1,101 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}% http://ctan.org/pkg/lm
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Lev}{Goncharov}
+\address{Saint Petersburg}{}{Russia}
+\email{lev@goncharov.xyz}
+\extrainfo{\href{https://github.com/ultral}{github.com/ultral}}
+%\homepage{goncharov.xyz}
+%%%%%\photo[64pt][0.4pt]{picture}
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle{}
+\section{Summary}
+\cvitem{}{As an innovative Senior DevOps Engineer with broad knowledge and understanding of modern technologies, 13+ years of experience in designing, automating, refactoring and implementing IaC approaches. I believe that infrastructure is code \& we must use the same philosophy for infrastructure as for software development.}
+
+\section{Computer skills}
+
+\begin{tabular}{ p{3.5cm} | p{0.1cm} p{3.5cm} p{0.1cm} p{3.5cm} p{0.1cm} p{3.5cm} }
+                   & & proficient   & & competent           & & beginner \\
+  \hline
+  CM               & & ansible      & & packer, terraform   & &  \\
+  Programming      & & bash, groovy & & python, ruby        & &  \\
+  Clouds           & &              & & OTC, AWS            & & GCP, Azure \\
+  Private Clouds   & &              & & ceph                & & vmware, esx \\
+  Containerization & &              & & docker, k8s         & & openshift, tanzu \\
+  CI/CD            & &              & & jenkins, gitlab     & & \\
+\end{tabular}
+
+\section{Experience}
+\cventry{2017--present}{Lead Expert Software Engineer}{\href{https://www.t-systems.com/}{T Systems}}{Saint Petersburg}{46000 EMPL}{
+\begin{itemize}
+  \item \href{http://www.goncharov.xyz/iac}{Switched} infrastructure management from manual to \href{https://www.goncharov.xyz/it/idlc-en.html}{IaC approach}.
+  \item \href{https://www.goncharov.xyz/it/deploy2openshift-en.html}{Created POCs of migration statefull application into openshift} \& azure pack.
+  \item \href{https://www.goncharov.xyz/it/coreos2centos-en.html}{Migrated 120 VMs configuration from custom CM to Ansible \& Packer in 18 months}.
+  \item \href{https://www.goncharov.xyz/it/ansible-testing-en.html}{Refactored legacy Ansible roles \& speeded up tests 60->12min}.
+  \item Created Ansible module \href{https://github.com/ansible-collections/community.vmware/blob/main/plugins/modules/vmware_content_deploy_ovf_template.py}{vmware\_content\_deploy\_ovf\_template}.
+  \item Created \href{https://habr.com/en/company/deutschetelekomitsolutions/blog/521648/}{DevOps School}.
+\end{itemize}}
+
+\cventry{2014--2017}{Lead Engineer}{\href{https://www.rcntec.com/}{Rcntec}}{Saint Petersburg}{Inhouse development; 1000 EMPL}{%
+\begin{itemize}%
+\item Developed \href{https://www.rcntec.com/en/press-centr/marketing-materials/rcs}{SDS} management software (microservices, mvp, protocol, api, architecture).
+\item Managed \href{https://habr.com/company/oleg-bunin/blog/431536/}{SDS} operation team (120 hosts, 10PB), searched the root cause of problems.
+\item Managed \href{https://www.rcntec.com/ru/produkty/sistema-hraneniya-dannyh-resilient-cloud-storage}{SDS} development --- scrum mastering, milestones \& sprints planning.
+\end{itemize}}
+
+\cventry{2012--2014}{System Administrator}{\href{https://byndyusoft.com/}{ByndyuSoft}}{Chelyabinsk}{Outstaffing; 40 EMPL}{
+\begin{itemize}%
+\item \href{http://dotnetconf.ru/materialy/monitoringandalerting}{Designed} and deployed fault-tolerant \href{https://habr.com/company/veeam/blog/193672/}{infrastructures} for clients (400 VMs AWS/Hyper-v).
+\end{itemize}}
+
+\cventry{2010--2012}{System Administrator}{\href{https://unrvld.com/}{Fuse 8}}{Chelyabinsk}{International digital agency; 90 EMPL}{
+\begin{itemize}%
+\item Maintained and improved hosting infrasructure (25 hosts \& 100 VMs).
+\end{itemize}}
+
+\section{Languages}
+\begin{multicols}{3}
+  \begin{itemize}
+    \item Russian --- Native
+    \item English --- B2+
+    \item German --- A1+
+  \end{itemize}
+\end{multicols}
+
+
+\section{Education}
+\cventry{2005--2011}{Master Degree in Computer Science}{\href{http://www.csu.ru/}{CSU}}{Information security specialist}{}{}
+\end{document}
+
+

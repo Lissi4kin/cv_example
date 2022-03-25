@@ -1,0 +1,10 @@
+*~
+*.aux
+*.dvi
+*.log
+*.out
+*.synctex(busy)
+kate/*.pdf
+lev/*.pdf
+mila/*.pdf
+*.gz
